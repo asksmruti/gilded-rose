@@ -27,6 +27,9 @@ class CommonAttributes(object):
 
 
 class NonConditionalItems(CommonAttributes):
+    """
+    Description: Update the item quality and sell_in value for the con-conditional products
+    """
 
     def update_item_quality(self):
         self.decrease_sell_in()
@@ -39,6 +42,9 @@ class NonConditionalItems(CommonAttributes):
 
 
 class AgedBrie(CommonAttributes):
+    """
+    Description: Update the item quality and sell_in value for "Aged Brie" product
+    """
     def update_item_quality(self):
         self.decrease_sell_in()
         # "Aged Brie" actually increases in Quality the older it gets
@@ -56,6 +62,9 @@ class Sulfuras(CommonAttributes):
 
 
 class BackstagePasses(CommonAttributes):
+    """
+    Description: Update the item quality and sell_in value for "BackstagePasses" product
+    """
     max_days = 10
     min_days = 5
 
@@ -75,6 +84,9 @@ class BackstagePasses(CommonAttributes):
 
 
 class Conjured(CommonAttributes):
+    """
+    Description: Update the item quality and sell_in value for Conjured item
+    """
     def update_item_quality(self):
         self.decrease_sell_in()
         # "Conjured" items degrade in Quality twice as fast as normal items
